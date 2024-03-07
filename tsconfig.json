@@ -1,0 +1,7 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "head": {
+    "link": "https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@600&display=swap"
+  }
+}
