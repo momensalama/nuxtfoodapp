@@ -1,26 +1,18 @@
 <script setup lang="ts">
-type FoodDataTypes = {
-  id: number;
-  name: string;
-  deliveryTime: string;
-  rating: number;
-  freeDelivery: boolean;
-  menu: {
-    id: number;
-    item: string;
-    price: number;
-    img: string;
-  }[];
-};
+defineProps({
+  datasource: {
+    type: [Array, Object],
+  },
+});
 import { useStore } from "@/store/index";
 const store = useStore();
-store.getFoodData(); // Call the action to fetch data
-const foodData = computed<FoodDataTypes[]>(() => store.fooddata);
+// store.getFoodData();
+// const foodData = computed(() => store.fooddata);
 </script>
 
 <template>
   <section class="restaurantinfo">
-    <div v-for="food in foodData" :key="food.id">
+    <div v-for="food in datasource" :key="food.id">
       <h2>
         {{ food.name }}
       </h2>

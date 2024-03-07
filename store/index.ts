@@ -1,7 +1,25 @@
 import { defineStore } from "pinia";
 
+interface FoodDataTypes {
+  id: number;
+  name: string;
+  deliveryTime: string;
+  rating: number;
+  freeDelivery: boolean;
+  menu: {
+    id: number;
+    item: string;
+    price: number;
+    img: string;
+  }[];
+}
+
+type State = {
+  fooddata: FoodDataTypes[];
+};
+
 export const useStore = defineStore("store", {
-  state: () => ({
+  state: (): State => ({
     fooddata: [],
   }),
   actions: {
