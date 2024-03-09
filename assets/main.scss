@@ -319,6 +319,10 @@ section.restaurantinfo {
     box-shadow: 2px 6px 6px 0 rgb(215, 215, 215);
   }
 
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+
   .iteminfo {
     background: white;
     width: 100%;
