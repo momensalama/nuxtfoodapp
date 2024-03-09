@@ -4,11 +4,11 @@ Nuxt Food App
 
 ## Description
 
-basic e-commerce food app that can add items to cart
+basic e-commerce food app that can add items to a cart
 
 ## Live Demo
 
-click on the link to [see live demo](https://nuxtfoodapp-tau.vercel.app)
+click on the link to [see the live demo](https://nuxtfoodapp-tau.vercel.app)
 
 ## Setup
 
@@ -28,8 +28,8 @@ npm run dev
 
 ### Main Functionalities
 
-- add items to cart
-- small validation when adding item with options or addons to cart
+- add items to the cart
+- small validation when adding items with options or add-ons to the cart
 
 ### Packages
 
