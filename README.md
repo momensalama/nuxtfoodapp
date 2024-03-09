@@ -1,75 +1,37 @@
-# Nuxt 3 Minimal Starter
+# Project Name
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt Food App
+
+## Description
+
+basic e-commerce food app that can add items to cart
+
+## Live Demo
+
+click on the link to [see live demo](https://nuxtfoodapp-tau.vercel.app)
 
 ## Setup
 
-Make sure to install the dependencies:
+**Vite** for building and managing the project
 
-```bash
-# npm
+```
+git clone https://github.com/momensalama/the-wild-oasis.git
+```
+
+```
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+```
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+### Main Functionalities
 
-Build the application for production:
+- add items to cart
+- small validation when adding item with options or addons to cart
 
-```bash
-# npm
-npm run build
+### Packages
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- **pinia**
+- **vuelidate**
