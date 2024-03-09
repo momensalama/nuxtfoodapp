@@ -10,6 +10,12 @@ basic e-commerce food app that can add items to a cart
 
 click on the link to [see the live demo](https://nuxtfoodapp-tau.vercel.app)
 
+![main image](../../mainImage.png)
+![all products](../../allProducts.png)
+![filtered products](../../filteredProducts.png)
+![product details](../../productDetails.png)
+![cart page](../../cart.png)
+
 ## Setup
 
 **Vite** for building and managing the project
