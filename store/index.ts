@@ -1,26 +1,10 @@
 import { defineStore } from "pinia";
-
-interface FoodDataTypes {
-  id: number;
-  name: string;
-  deliveryTime: string;
-  rating: number;
-  freeDelivery: boolean;
-  menu: {
-    id: number;
-    item: string;
-    price: number;
-    img: string;
-  }[];
-}
-
-type State = {
-  fooddata: FoodDataTypes[];
-};
+import type { CartTypes, StateStore } from "~/types";
 
 export const useStore = defineStore("store", {
-  state: (): State => ({
+  state: (): StateStore => ({
     fooddata: [],
+    cart: [],
   }),
   actions: {
     async getFoodData() {
@@ -43,9 +27,19 @@ export const useStore = defineStore("store", {
       }
     },
   },
-  // getters: {
-  //   doubleCount() {
-  //     return this.count * 2;
-  //   },
-  // },
+  getters: {
+    addToCart: (state) => {
+      return (payload: CartTypes) => {
+        state.cart.push(payload);
+      };
+    },
+    totalPrice: (state) => {
+      if (!state.cart.length) return 0;
+      return state.cart.reduce((acu, cur) => acu + cur.price, 0);
+    },
+    getCartCount: (state) => {
+      if (!state.cart.length) return 0;
+      return state.cart.reduce((acu, cur) => acu + cur.count, 0);
+    },
+  },
 });

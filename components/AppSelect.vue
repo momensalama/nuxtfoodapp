@@ -1,13 +1,9 @@
 <script setup lang="ts">
-defineProps({
-  select: {
-    type: String,
-    default: "cuisine",
-  },
-  selectOptions: {
-    type: Array as PropType<string[]>,
-    default: () => ["tacos", "pizza", "dim sum"],
-  },
+import type { AppSelectTypes } from "~/types";
+
+withDefaults(defineProps<AppSelectTypes>(), {
+  select: "cuisine",
+  selectOptions: () => ["tacos", "pizza", "dim sum"],
 });
 defineEmits(["change"]);
 </script>

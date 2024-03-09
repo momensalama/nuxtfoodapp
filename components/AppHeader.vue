@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <section class="masthead" role="img" aria-label="Image Description">
     <h1>Nuxt Food App</h1>

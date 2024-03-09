@@ -5,8 +5,10 @@ const store = useStore();
 </script>
 
 <template>
-  <AppMenu />
-  <NuxtPage />
+  <div class="content">
+    <AppMenu />
+    <NuxtPage />
+  </div>
   <footer>
     <p>copyrights information here!</p>
   </footer>

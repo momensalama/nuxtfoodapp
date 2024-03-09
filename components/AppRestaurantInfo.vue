@@ -1,13 +1,7 @@
 <script setup lang="ts">
-defineProps({
-  datasource: {
-    type: [Array, Object],
-  },
-});
-import { useStore } from "@/store/index";
-const store = useStore();
-// store.getFoodData();
-// const foodData = computed(() => store.fooddata);
+import type { AppRestaurantsInfoTypes } from "~/types";
+
+defineProps<AppRestaurantsInfoTypes>();
 </script>
 
 <template>
@@ -38,7 +32,9 @@ const store = useStore();
                 {{ `$${menuItem.price.toFixed(2)}` }}
               </p>
             </div>
-            <button class="ghost">View Item &rarr;</button>
+            <NuxtLink :to="`/items/${menuItem.id}`">
+              <button class="ghost">View Item &rarr;</button>
+            </NuxtLink>
           </div>
         </div>
       </div>
