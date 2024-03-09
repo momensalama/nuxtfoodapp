@@ -54,7 +54,10 @@ function onAddToCart() {
     id: crypto.randomUUID(),
   };
   let addonError = $v.value.itemAddons.$invalid;
-  let optionError = getFoodItem.value?.options && $v.value.itemOptions;
+  let optionError = getFoodItem.value?.options
+    ? $v.value.itemOptions.$invalid
+    : false;
+  console.log(optionError);
   if (addonError || optionError) {
     state.errors = true;
   } else {
