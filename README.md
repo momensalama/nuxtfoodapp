@@ -12,9 +12,6 @@ click on the link to [see the live demo](https://nuxtfoodapp-tau.vercel.app)
 
 ![main image](/public/mainImage.png)
 ![all products](/public/allProducts.png)
-![filtered products](/public/filteredProducts.png)
-![product details](/public/productDetails.png)
-![cart page](/public/cart.png)
 
 ## Setup
 
@@ -32,10 +29,12 @@ npm install
 npm run dev
 ```
 
-### Main Functionalities
+## Main Functionalities
 
 - add items to the cart
 - small validation when adding items with options or add-ons to the cart
+## Stack
+nuxt.js, pinia
 
 ### Packages
 
